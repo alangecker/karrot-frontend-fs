@@ -80,7 +80,7 @@ export default datastore => {
     getters['latestMessages/unseenCount'],
   ], ([breadcrumbNames, unseenCount]) => {
     const names = breadcrumbNames.slice().reverse()
-    names.push('Karrot')
+    names.push('foodsharing.de')
     let title = names.join(' · ')
 
     if (unseenCount > 0) {

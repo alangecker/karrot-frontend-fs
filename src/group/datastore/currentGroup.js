@@ -140,6 +140,9 @@ export default {
 
         await dispatch('fetch', groupId)
 
+        // fsLegacy Hook
+        window.fsLegacyTopbar.ui.activeRegionId = groupId
+
         const hasError = getters['meta/status']('fetch', groupId).hasValidationErrors
 
         if (hasError) {

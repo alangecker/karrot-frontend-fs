@@ -12,6 +12,7 @@ import { isServerError } from '@/utils/datastore/helpers'
 const axios = Axios.create({
   xsrfCookieName: 'csrftoken',
   xsrfHeaderName: 'X-CSRFTOKEN',
+  baseURL: '/karrot',
 })
 
 const makeThrottledWarner = (message) =>

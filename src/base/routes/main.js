@@ -30,7 +30,7 @@ const GroupMembers = () => import('@/users/pages/Members')
 const GroupHistory = () => import('@/history/pages/GroupHistory')
 const Sidenav = () => import('@/sidenav/components/Sidenav')
 const Settings = () => import('@/authuser/pages/Settings')
-const User = () => import('@/users/pages/Profile')
+// const User = () => import('@/users/pages/Profile')
 const PickupFeedback = () => import('@/feedback/pages/GiveFeedback')
 const Detail = () => import('@/messages/components/Detail')
 const DetailHeader = () => import('@/messages/components/DetailHeader')
@@ -491,19 +491,26 @@ export default [
     name: 'user',
     path: '/user/:userId',
     meta: {
-      requireLoggedIn: true,
-      breadcrumbs: [
-        { type: 'currentGroup' },
-        { type: 'activeUser' },
-      ],
-      beforeEnter: 'users/selectUser',
-      afterLeave: 'users/clearSelectedUser',
-    },
-    components: {
-      default: User,
-      sidenav: Sidenav,
+      beforeEnter: 'fslegacy/goToProfile',
     },
   },
+  // {
+  //   name: 'user',
+  //   path: '/user/:userId',
+  //   meta: {
+  //     requireLoggedIn: true,
+  //     breadcrumbs: [
+  //       { type: 'currentGroup' },
+  //       { type: 'activeUser' },
+  //     ],
+  //     beforeEnter: 'users/selectUser',
+  //     afterLeave: 'users/clearSelectedUser',
+  //   },
+  //   components: {
+  //     default: User,
+  //     sidenav: Sidenav,
+  //   },
+  // },
   {
     name: 'userDetail',
     path: '/user/:userId/detail',

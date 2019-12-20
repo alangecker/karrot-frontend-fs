@@ -9,6 +9,7 @@ import authuser from '@/authuser/datastore'
 import base from '@/base/datastore/base'
 import communityFeed from '@/communityFeed/datastore'
 import feedback from '@/feedback/datastore'
+import fslegacy from '@/fslegacy/datastore'
 import group from '@/group/datastore'
 import groupInfo from '@/groupInfo/datastore'
 import history from '@/history/datastore'
@@ -34,6 +35,7 @@ const appModules = [
   base,
   communityFeed,
   feedback,
+  fslegacy,
   group,
   groupInfo,
   history,

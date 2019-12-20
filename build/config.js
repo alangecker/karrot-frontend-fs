@@ -28,9 +28,9 @@ const backendProxy = {
 module.exports = {
   backend,
   proxyTable: {
-    '/api': backendProxy,
-    '/media': backendProxy,
-    '/community_proxy': {
+    '/karrot/api': backendProxy,
+    '/karrot/media': backendProxy,
+    '/karrot/community_proxy': {
       target: 'https://dev.karrot.world',
       changeOrigin: true,
     },

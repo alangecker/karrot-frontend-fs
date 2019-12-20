@@ -25,7 +25,7 @@
       :class="theme"
     >
       <QLayout :view="layoutView">
-        <QHeader reveal>
+        <!-- <QHeader reveal>
           <KTopbar
             v-if="isLoggedIn"
             @toggleSidenav="toggleSidenav"
@@ -46,7 +46,7 @@
           </KTopbar>
           <KTopbarLoggedOut v-if="!isLoggedIn" />
           <RouterView name="subheader" />
-        </QHeader>
+        </QHeader> -->
 
         <!-- mobile sidenav -->
         <QDrawer
@@ -161,8 +161,8 @@
 </template>
 
 <script>
-import KTopbar from '@/topbar/components/KTopbar'
-import KTopbarLoggedOut from '@/topbar/components/LoggedOut/KTopbar'
+// import KTopbar from '@/topbar/components/KTopbar'
+// import KTopbarLoggedOut from '@/topbar/components/LoggedOut/KTopbar'
 import KAbout from '@/base/components/KAbout'
 import SidenavTitle from '@/sidenav/components/SidenavTitle'
 import MobileSidenav from '@/sidenav/components/MobileSidenav'
@@ -195,8 +195,8 @@ export default {
     QDialog,
     DetailSidebar,
     KAbout,
-    KTopbar,
-    KTopbarLoggedOut,
+    // KTopbar,
+    // KTopbarLoggedOut,
     SidenavTitle,
     MobileSidenav,
     QLayout,

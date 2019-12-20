@@ -24,7 +24,7 @@ let WEBSOCKET_ENDPOINT
 if (__ENV.CORDOVA) {
   WEBSOCKET_ENDPOINT = [
     __ENV.BACKEND.replace(/^http/, 'ws'),
-    '/api/ws',
+    '/karrot/api/ws',
   ].join('')
 }
 else {
@@ -32,7 +32,7 @@ else {
     window.location.protocol.replace(/^http/, 'ws'),
     '//',
     window.location.host,
-    '/api/ws',
+    '/karrot/api/ws',
   ].join('')
 }
 
